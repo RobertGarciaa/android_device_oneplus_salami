@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/salami/device.mk)
 # Inherit some common aosp stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Call the AOSP Dialer setup
+$(call inherit-product, vendor/Dialer/Dialer.mk)
+
 PRODUCT_NAME := aosp_salami
 PRODUCT_DEVICE := salami
 PRODUCT_MANUFACTURER := OnePlus
