@@ -14,8 +14,11 @@ $(call inherit-product, device/oneplus/salami/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Call mindthegapps
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+# Pixel GMS
+$(call inherit-product, vendor/pixel/gms/products/gms.mk)
+
+# BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
  
 WITH_GAPPS := true
 
