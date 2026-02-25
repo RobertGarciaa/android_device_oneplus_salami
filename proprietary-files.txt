@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 11 5G (CPH2449_16.0.2.400(EX01)).
+## are from OnePlus 11 5G (PHB110_16.0.3.500(CN01)).
 
 # ACDB
 odm/etc/acdbdata/FTM/acdb_cal.acdb
@@ -10,6 +10,19 @@ odm/etc/acdbdata/acdb_cal.acdb
 # ADSP modules
 odm/lib/rfsa/adsp/libtfadsp_sb4_0_rx.so
 odm/lib/rfsa/adsp/libtfadsp_sb4_0_tx.so
+odm/lib/rfsa/adsp/oplusmss/unsigned/libQnnHtpV73Skel.so
+
+# ANT+ firmware
+odm/vendor/firmware/antdtx.b00
+odm/vendor/firmware/antdtx.b01
+odm/vendor/firmware/antdtx.b02
+odm/vendor/firmware/antdtx.b03
+odm/vendor/firmware/antdtx.b04
+odm/vendor/firmware/antdtx.b05
+odm/vendor/firmware/antdtx.b06
+odm/vendor/firmware/antdtx.b07
+odm/vendor/firmware/antdtx.b08
+odm/vendor/firmware/antdtx.mdt
 
 # Audio configs
 odm/etc/mixer_paths.xml
@@ -904,6 +917,7 @@ odm/lib64/libCipParameter4.so
 odm/lib64/libCipParameter5.so
 odm/lib64/libCipParameter6.so
 odm/lib64/libCipo_awb.so
+odm/lib64/libCNamaSDK_vendor.so
 odm/lib64/libDeVIS.so
 odm/lib64/libEIS.so
 odm/lib64/libFDClite.so
@@ -913,6 +927,7 @@ odm/lib64/libFaceBeautyPICap.so
 odm/lib64/libFaceBeautyPre.so
 odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFilterWrapper.so
+odm/lib64/libfuai_vendor.so
 odm/lib64/libHIS.so
 odm/lib64/libImageWarpMask.so;FIX_SONAME
 odm/lib64/libOGLManager.so
@@ -1023,6 +1038,7 @@ odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
 odm/lib64/libmsnativefilter.so
 odm/lib64/libnpu.so
+odm/lib64/libNamaWrapper.so
 odm/lib64/liboplusblur_capture_api.so
 odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
@@ -1244,9 +1260,9 @@ vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Charger firmware
-odm/firmware/fastchg/22861/bms_heating_config.txt
-odm/firmware/fastchg/22861/charging_hyper_mode_config.txt
-odm/firmware/fastchg/22861/charging_thermal_config_default.txt
+odm/firmware/fastchg/22811/bms_heating_config.txt
+odm/firmware/fastchg/22811/charging_hyper_mode_config.txt
+odm/firmware/fastchg/22811/charging_thermal_config_default.txt
 odm/firmware/fastchg/smart_chg_config_table.txt
 
 # Display (Pixelworks)
@@ -1380,10 +1396,6 @@ vendor/etc/ltm_config_samsung_AMB670YF07_FS_dsc_cmd_mode_panel.xml
 vendor/etc/ltm_config_samsung_AMB670YF08_CS_dsc_cmd_mode_panel.xml
 vendor/etc/ltm_config_samsung_AMB670YF08_FS_dsc_cmd_mode_panel.xml
 
-# eUICC
-my_product/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/permissions/privapp-permissions-euiccgoogle.xml
-my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
-
 # Fingerprint firmware
 odm/vendor/firmware/uff_gx.b00
 odm/vendor/firmware/uff_gx.b01
@@ -1406,10 +1418,17 @@ odm/vendor/firmware/uff_spi.b07
 odm/vendor/firmware/uff_spi.b08
 odm/vendor/firmware/uff_spi.mdt
 
+# Neural networks
+odm/lib64/oplusmss/libQnnHtp.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnHtpPrepare.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnHtpV73Stub.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libQnnSystem.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libaiboost.so;MODULE_SUFFIX=.oplusmss
+odm/lib64/oplusmss/libaiboost_qnn_external_delegate.so;MODULE_SUFFIX=.oplusmss;FIX_SONAME
+
 # NFC configs
-odm/etc/nfc/libnfc-mtp-SN100.conf_22811:odm/etc/libnfc-mtp-SN100.conf_22811
-odm/etc/nfc/libnfc-mtp-SN100.conf_22861:odm/etc/libnfc-mtp-SN100.conf_22861
-odm/etc/nfc/libnfc-nci.conf_22861:vendor/etc/libnfc-nci.conf
+odm/etc/nfc/libnfc-mtp-SN100.conf_22811:vendor/etc/libnfc-nxp.conf
+odm/etc/nfc/libnfc-nci.conf_22811:vendor/etc/libnfc-nci.conf
 
 # NFC firmware
 odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_60:vendor/firmware/sn100u_22861.bin
@@ -1429,11 +1448,13 @@ odm/etc/sensor/config/kailua_mtp_freefall.json
 odm/etc/sensor/config/kailua_mtp_icm4x6xx.json
 odm/etc/sensor/config/kailua_mtp_mmc56x3x.json
 odm/etc/sensor/config/kailua_mtp_oplus_flight_detect.json
+odm/etc/sensor/config/kailua_mtp_oplus_flight_scene.json
 odm/etc/sensor/config/kailua_mtp_oplus_lay.json
 odm/etc/sensor/config/kailua_mtp_pocket.json
 odm/etc/sensor/config/kailua_mtp_sx933x_0.json
 odm/etc/sensor/config/kailua_mtp_sx933x_down_0.json
 odm/etc/sensor/config/lux_aod.json
+odm/etc/sensor/config/qsh_ble.json
 odm/etc/sensor/config/salami_qrd_ois_system.json
 odm/etc/sensor/sensor_config.json
 
@@ -1456,9 +1477,6 @@ odm/etc/aac_richtap.config
 vendor/lib64/libaacvibrator.so
 
 # WiFi
-odm/etc/wifi/kiwi/bdwlan.b0a
-odm/etc/wifi/kiwi/bdwlan.b0e
-odm/etc/wifi/kiwi/bdwlan.b0i
 odm/etc/wifi/kiwi/bdwlan.elf
 odm/etc/wifi/kiwi/regdb.bin
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
