@@ -14,3 +14,9 @@ runtime_resource_overlay {
     manifest: "AndroidManifest_NA.xml",
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "FrameworksResEuicc_CN",
+    manifest: "AndroidManifest_CN.xml",
+    vendor: true,
+}
