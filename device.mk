@@ -38,13 +38,22 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    FrameworksResEuicc_CN \
+    FrameworksResEuicc_EU \
+    FrameworksResEuicc_NA \
     KeyHandlerResTarget \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
     OPlusWifiResTarget
+
+# Regional properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22811/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/22811/build.default.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22861/build.EU.prop:$(TARGET_COPY_OUT_ODM)/etc/22861/build.EU.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22861/build.IN.prop:$(TARGET_COPY_OUT_ODM)/etc/22861/build.IN.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22861/build.NA.prop:$(TARGET_COPY_OUT_ODM)/etc/22861/build.NA.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22861/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/22861/build.default.prop
 
 # Sensors
 PRODUCT_PACKAGES += \

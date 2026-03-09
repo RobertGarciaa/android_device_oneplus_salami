@@ -26,14 +26,14 @@ PRODUCT_NAME := lineage_salami
 PRODUCT_DEVICE := salami
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := PHB110
+PRODUCT_MODEL := CPH2449
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi-user 16 BP2A.250605.015 1769430472173 release-keys" \
-    BuildFingerprint=OnePlus/PHB110/OP591BL1:16/TP1A.220905.001/T.36e6579-1494e6a-1494e66:user/release-keys \
-    DeviceName=OP591BL1 \
-    DeviceProduct=PHB110 \
-    SystemDevice=OP591BL1 \
-    SystemName=PHB110
+    BuildDesc="qssi-user 16 BP2A.250605.015 1765979429525 release-keys" \
+    BuildFingerprint=OnePlus/CPH2449EEA/OP594DL1:16/TP1A.220905.001/T.R4T3.1c7c236_518927_518925:user/release-keys \
+    DeviceName=OP594DL1 \
+    DeviceProduct=CPH2449 \
+    SystemDevice=OP594DL1 \
+    SystemName=CPH2449

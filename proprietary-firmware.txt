@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 11 5G (PHB110_16.0.3.500(CN01)).
+## are from OnePlus 11 5G (CPH2449_16.0.2.400(EX01)).
 
 abl.img;AB
 aop.img;AB
@@ -15,7 +15,6 @@ imagefv.img;AB
 keymaster.img;AB
 modem.img;AB
 oplus_sec.img;AB
-oplusstanvbk.img;AB
 qupfw.img;AB
 shrm.img;AB
 splash.img;AB
