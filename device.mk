@@ -21,8 +21,10 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     OplusLtpo
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946342906530435.xml
+$(foreach display_id, 4630946342906530435 4630946342906530436, \
+    $(eval PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
+    ))
 
 # Fingerprint
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
